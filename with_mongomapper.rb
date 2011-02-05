@@ -1,12 +1,16 @@
+gem "mongo_mapper", :git => "https://github.com/jnunemaker/mongomapper.git", :branch => "rails3"
+gem "bson_ext"
 gem "capybara", ">= 0.4.0", :group => [:cucumber, :test]
 gem "cucumber-rails", ">= 0.3.2", :group => [:cucumber, :test]
 gem "database_cleaner", ">= 0.5.2", :group => [:cucumber, :test]
 gem "fabrication", ">= 0.9.4"
 gem "rspec-rails", ">= 2.2.1", :group => [:cucumber, :development, :test]
+gem "mongo_ext", :group => :production
 
 generators = <<-GENERATORS
 
     config.generators do |g|
+      g.orm :mongo_mapper
       g.test_framework :rspec, :fixture => true, :views => false
       g.fixture_replacement :fabrication, :dir => "spec/fabricators"
       g.integration_tool :rspec
@@ -32,6 +36,12 @@ create_file "tmp/.gitkeep"
 git :init
 git :add => "."
 
+create_file "log/.gitkeep"
+create_file "tmp/.gitkeep"
+
+git :init
+git :add => "."
+
 docs = <<-DOCS
 
 Run the following commands to complete the setup of #{app_name.humanize}:
@@ -42,6 +52,7 @@ Run the following commands to complete the setup of #{app_name.humanize}:
 % bundle install
 % rails g rspec:install
 % rails g cucumber:install --rspec --capybara
+% rails g mongo_mapper:config
 
 DOCS
 
