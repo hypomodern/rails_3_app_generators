@@ -4,11 +4,17 @@
 
 A list:
 
-* My default: rspec, cucumber, jquery, and [insert fixture replacement here].
+* My default: rspec, cucumber, jquery, and fabrication (a fixture replacement lib) [see](https://github.com/paulelliott/fabrication).
+* + mongo_mapper
 
 To use:
 
     rails new my_app -JTm \
     https://github.com/hypomodern/rails_3_app_generators/raw/master/rspec_cucumber_fabrication_jquery.rb
+
++ mongo:
+
+    rails new my_app -JTm \
+    https://github.com/hypomodern/rails_3_app_generators/raw/master/with_mongomapper.rb
 
 **Thanks!** to leshill; for slightly different recipes see [here](https://github.com/leshill/rails3-app).
