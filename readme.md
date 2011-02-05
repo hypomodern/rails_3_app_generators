@@ -12,7 +12,7 @@ To use:
     rails new my_app -JTm \
     https://github.com/hypomodern/rails_3_app_generators/raw/master/rspec_cucumber_fabrication_jquery.rb
 
-+ mongo:
+plus mongo:
 
     rails new my_app -JTm \
     https://github.com/hypomodern/rails_3_app_generators/raw/master/with_mongomapper.rb
