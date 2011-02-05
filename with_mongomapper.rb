@@ -1,4 +1,4 @@
-gem "mongo_mapper", :git => "https://github.com/jnunemaker/mongomapper.git", :branch => "rails3"
+gem "mongo_mapper", :git => "https://github.com/jnunemaker/mongomapper.git", :branch => "master"
 gem "bson_ext"
 gem "capybara", ">= 0.4.0", :group => [:cucumber, :test]
 gem "cucumber-rails", ">= 0.3.2", :group => [:cucumber, :test]
