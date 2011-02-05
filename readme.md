@@ -5,7 +5,7 @@
 A list:
 
 * My default: rspec, cucumber, jquery, and fabrication (a fixture replacement lib) [see](https://github.com/paulelliott/fabrication).
-* + mongo_mapper
+* the above plus mongo_mapper
 
 To use:
 
