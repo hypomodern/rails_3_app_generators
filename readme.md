@@ -16,5 +16,6 @@ plus mongo:
     rails new APP_NAME -m https://raw.github.com/hypomodern/rails_3_app_generators/master/with_mongomapper.rb -T -O
 
 **Thanks!**
+
 * to leshill; for slightly different recipes see [here](https://github.com/leshill/rails3-app).
 * to the RailsApps project, who has a bunch of stuff [here](http://railsapps.github.com/).
