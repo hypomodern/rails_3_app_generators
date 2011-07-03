@@ -1,20 +1,20 @@
 ## Rails 3 App Generators
 
-**N.B.** Rails 3.0.3 doesn't recognize https as an internet protocol, so using the command below will fail. In the meantime, consider: `curl https://github.com/hypomodern/rails_3_app_generators/raw/master/rspec_cucumber_fabrication_jquery.rb > /tmp/template.rb; rails new my_app_name -JTm /tmp/template.rb; rm -f /tmp/template.rb`
+A list (jquery now standard in Rails 3.1!):
 
-A list:
-
-* My default: rspec, cucumber, jquery, and fabrication (a fixture replacement lib) [see](https://github.com/paulelliott/fabrication).
+* My default: rspec, cucumber, and fabrication (a fixture replacement lib) [about which see](https://github.com/paulelliott/fabrication).
 * the above plus mongo_mapper
 
-To use:
+Note, largely to self: it now runs bundle install automagically, which is usually not what we want right away. Skip with `--skip-bundle`.
 
-    rails new my_app -JTm \
-    https://github.com/hypomodern/rails_3_app_generators/raw/master/rspec_cucumber_fabrication_jquery.rb
+To use (-T skips test/unit, -O skips active_record):
+
+    rails new APP_NAME -m https://raw.github.com/hypomodern/rails_3_app_generators/master/rspec_cucumber_fabrication.rb -T
 
 plus mongo:
 
-    rails new my_app -JTm \
-    https://github.com/hypomodern/rails_3_app_generators/raw/master/with_mongomapper.rb
+    rails new APP_NAME -m https://raw.github.com/hypomodern/rails_3_app_generators/master/with_mongomapper.rb -T -O
 
-**Thanks!** to leshill; for slightly different recipes see [here](https://github.com/leshill/rails3-app).
+**Thanks!**
+* to leshill; for slightly different recipes see [here](https://github.com/leshill/rails3-app).
+* to the RailsApps project, who has a bunch of stuff [here](http://railsapps.github.com/).
